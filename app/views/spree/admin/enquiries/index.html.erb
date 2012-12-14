@@ -1,0 +1,39 @@
+<div class='toolbar'>
+  <ul class='actions'>
+    
+  </ul>
+  <br class='clear' />
+</div>
+
+<h1><%=t("enquiries.enquiries") %></h1>
+
+<table class="index">
+	<tr>
+		<th><%= Spree::Enquiry.human_attribute_name(:email) %></th>
+		<th></th>
+		<th></th>
+		<th></th>
+		<th><%= t("action") %></th>
+  </tr>
+	<tbody>
+    	<% @enquiries.each do |enquiry| %>
+		<tr class="<%= cycle('even', 'odd') %>" id="<%= dom_id enquiry %>">
+			<td>
+				<%= enquiry.email %>
+			</td>
+			<td>
+				<%= enquiry.subject %>
+			</td>
+			<td>
+				<%= enquiry.created_at %>
+			</td>
+			<td>
+				<%= link_to t('view'), admin_enquiry_path(enquiry) %>
+			</td>
+			<td>
+        		<%= link_to_delete enquiry %>
+	    	</td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
