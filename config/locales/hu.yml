@@ -1,0 +1,9 @@
+hu:
+  spree_enquiry:
+    enquiries: Kérdések
+    enquiry: Kérdés
+    send: Elküld
+    email: Emailcím
+    subject: Tárgy
+    body: Kérdés
+    successfully_submitted: "Sikeres kérdés beküldés."

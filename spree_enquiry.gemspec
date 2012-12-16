@@ -7,8 +7,8 @@ Gem::Specification.new do |s|
   s.description = 'TODO: Add (optional) gem description here'
   s.required_ruby_version = '>= 1.8.7'
 
-  # s.author    = 'You'
-  # s.email     = 'you@example.com'
+  s.author    = 'Greg Molnar'
+  s.email     = 'molnargerg@gmail.com'
   # s.homepage  = 'http://www.spreecommerce.com'
 
   #s.files       = `git ls-files`.split("\n")
@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_dependency 'spree_core', '~> 1.2.2'
+  # s.add_dependency 'spree_core', '~> 1.2.2'
 
   s.add_development_dependency 'capybara', '1.0.1'
   s.add_development_dependency 'factory_girl', '~> 2.6.4'

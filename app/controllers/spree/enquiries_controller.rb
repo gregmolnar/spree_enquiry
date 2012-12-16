@@ -1,4 +1,4 @@
-class Spree::EnquiriesController < Spree::BaseController
+class Spree::EnquiriesController < Spree::StoreController
   def new
     @enquiry = Spree::Enquiry.new
   end

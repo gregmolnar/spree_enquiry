@@ -2,4 +2,7 @@ en:
   spree_enquiry:
     enquiries: Enquiries
     send: Send
+    email: Email
+    subject: Subject
+    body: Enquiry
     successfully_submitted: "Enquiry was successfully submitted."
