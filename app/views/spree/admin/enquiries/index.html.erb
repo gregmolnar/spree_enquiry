@@ -25,11 +25,12 @@
 				<%= enquiry.subject %>
 			</td>
 			<td>
-				<%= enquiry.created_at %>
+				<%= enquiry.body %>
 			</td>
 			<td>
-				<%= link_to t('view'), admin_enquiry_path(enquiry) %>
+				<%= enquiry.created_at %>
 			</td>
+			
 			<td>
         		<%= link_to_delete enquiry %>
 	    	</td>
