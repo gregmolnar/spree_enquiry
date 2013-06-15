@@ -13,6 +13,7 @@
 		<th></th>
 		<th></th>
 		<th></th>
+		<th></th>
 		<th><%= t("action") %></th>
   </tr>
 	<tbody>
@@ -30,7 +31,9 @@
 			<td>
 				<%= enquiry.created_at %>
 			</td>
-			
+			<td>
+				<%= enquiry.ip %>
+			</td>
 			<td>
         		<%= link_to_delete enquiry %>
 	    	</td>

@@ -8,6 +8,7 @@ class Spree::EnquiriesController < Spree::StoreController
     unless params[:details][:full_name].blank?
       redirect_to root_path, :notice => t('spree_enquiry.successfully_submitted') 
     else
+      @enquiry.ip = request.ip
       if @enquiry.save
         redirect_to root_path, :notice => t('spree_enquiry.successfully_submitted')
       else
