@@ -1,6 +1,6 @@
 <%= form_for @enquiry, :html => {:method => :post} do |f| %>
   <%= render "spree/shared/error_messages", :target => @enquiry %>
-
+  <%= text_field 'details', :full_name, :maxlength => "255", :size => "50", :style => 'display:none' %>
   <p>
     <%= f.label t 'spree_enquiry.email' %> <span class="required">*</span><br />
     <%= f.text_field :email, :maxlength => "255", :size => "50" %>

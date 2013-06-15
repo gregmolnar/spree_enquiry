@@ -5,10 +5,14 @@ class Spree::EnquiriesController < Spree::StoreController
 
   def create
     @enquiry = Spree::Enquiry.new(params[:enquiry])
-    if @enquiry.save
-      redirect_to root_path, :notice => t('spree_enquiry.successfully_submitted')
+    unless params[:details][:full_name].blank?
+      redirect_to root_path, :notice => t('spree_enquiry.successfully_submitted') 
     else
-      render :action => "new"
+      if @enquiry.save
+        redirect_to root_path, :notice => t('spree_enquiry.successfully_submitted')
+      else
+        render :action => "new"
+      end
     end
   end
 end
